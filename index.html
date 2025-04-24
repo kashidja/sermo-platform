@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermo - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'courier': ['"Courier New"', 'monospace'],
+                    },
+                    colors: {
+                        'primary': '#d87c66',
+                        'primary-dark': '#aa5d4a',
+                        'secondary': '#ffd27f',
+                        'background': '#f4e2c9',
+                    },
+                    screens: {
+                        'xs': '480px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-courier bg-background text-gray-800 text-center m-0">
+    <header>
+        <div
+            class="flex flex-col xs:flex-row items-center justify-center bg-primary py-5 px-5 border-b-4 border-primary-dark">
+            <div class="flex items-center mb-4 xs:mb-0">
+                <img src="owls-logo.webp" alt="Owl Logo"
+                    class="w-[60px] h-[60px] xs:w-[70px] xs:h-[70px] object-cover rounded-xl mr-3 xs:mr-4">
+                <h1 id="title" class="text-white text-2xl xs:text-3xl">SERMO</h1>
+            </div>
+            <div class="hidden xs:block w-0.5 h-10 bg-white mx-5"></div>
+            <nav class="mt-4 xs:mt-0">
+                <ul class="list-none p-0 flex flex-wrap justify-center gap-3 xs:gap-4">
+                    <li><a href="#" class="no-underline text-white font-bold hover:underline">Home</a></li>
+                    <li><a href="learn.html" class="no-underline text-white font-bold hover:underline">Learn</a></li>
+                    <li><a href="practice.html" class="no-underline text-white font-bold hover:underline">Practice</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="px-4">
+        <div class="flex flex-col lg:flex-row justify-between gap-8 max-w-4xl mx-auto my-10">
+            <section class="flex-1 p-6 bg-secondary border-4 border-primary-dark rounded-xl lg:max-w-md">
+                <h2 class="text-2xl mb-4">Select Your Language & Scenario</h2>
+                <p class="mb-6">Here you can choose a language and start practicing scenarios to boost your talking
+                    skills.</p>
+                <img src="https://murf.ai/resources/media/posts/140/26876779_Conversation-between-chat-bot-on-screen-of-phone-and-customer-1.jpg"
+                    alt="Illustration of a chatbot conversation with a user"
+                    class="w-full max-w-[400px] mx-auto mb-6 rounded-lg">
+
+                <div class="flex flex-col space-y-6 mb-6">
+                    <div>
+                        <label for="language" class="block mb-2 text-lg">Choose a language:</label>
+                        <select id="language" name="language"
+                            class="font-courier text-base p-2 border-4 border-primary-dark bg-secondary rounded-lg cursor-pointer w-full max-w-xs mx-auto hover:bg-background focus:outline-none focus:ring-2 focus:ring-primary-dark">
+                            <option value="german">German</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="scenario" class="block mb-2 text-lg">Choose a scenario:</label>
+                        <select id="scenario" name="scenario"
+                            class="font-courier text-base p-2 border-4 border-primary-dark bg-secondary rounded-lg cursor-pointer w-full max-w-xs mx-auto hover:bg-background focus:outline-none focus:ring-2 focus:ring-primary-dark">
+                            <option value="restaurant">Restaurant</option>
+                            <option value="airport">Airport</option>
+                            <option value="hotel">Hotel</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-6 mt-6">
+                    <button
+                        class="bg-transparent border-none cursor-pointer w-14 h-14 rounded-full overflow-hidden hover:scale-110 transition-transform">
+                        <img src="mic-logo.jpg" alt="Microphone" class="w-full h-full object-cover rounded-full">
+                    </button>
+                    <button
+                        class="bg-transparent border-none cursor-pointer w-14 h-14 rounded-full overflow-hidden hover:scale-110 transition-transform">
+                        <img src="AI-logo.jpg" alt="AI Speak" class="w-full h-full object-cover rounded-full">
+                    </button>
+                </div>
+            </section>
+
+            <section class="flex-1 text-left bg-white p-6 rounded-lg border-2 border-primary-dark lg:max-w-md">
+                <h3 class="text-xl mb-4">Conversation</h3>
+                <div class="bg-background p-4 rounded-lg min-h-[200px]">
+                    <p class="mb-3"><strong>AI:</strong> Hello! How can I assist you today?</p>
+                    <p><strong>You:</strong> I'd like to order a coffee, please.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="mt-10 py-4 px-2 bg-primary text-white">
+        <p class="text-sm xs:text-base">2025 Sermo. Version 1.0.</p>
+    </footer>
+</body>
+
+</html>
